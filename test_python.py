@@ -12,6 +12,17 @@ for file_name in os.listdir(root_path):
         img_file = root_path + '\\'+ file_name
         padded_img = padding(j_file,img_file)
         padded_img.save(output_path+'\\'+file_name)
+        
+        
+        
+def padding(json,image):
+    with open(json, 'r') as f:
+        temp = J.loads(f.read())
+    points = np.array(temp['shapes'][0]['points'])
+    img_arr =np.array(Image.open(image))
+    a = int(points[0,0])
+    b = int(points[0,1])
+    c = int(points[1,0])
 
 
 
