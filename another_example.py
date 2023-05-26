@@ -30,6 +30,11 @@ def padding(json,image):
     img_arr[:, d:649, :] = 0
     new_img = Image.fromarray(img_arr)
     return new_img
+    
+    a = int(points[0,0])
+    b = int(points[0,1])
+    c = int(points[1,0])
+    d = int(points[1,1])
 
 
 
