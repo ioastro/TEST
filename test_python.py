@@ -15,4 +15,8 @@ for file_name in os.listdir(root_path):
         
 
 
+# two lines of code
+padded_img = padding(j_file,img_file)
+padded_img.save(output_path+'\\'+file_name)
+
 
